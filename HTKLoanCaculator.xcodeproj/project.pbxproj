@@ -3,18 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C24AC43326A0749C009DF01A /* Localizations.strings in Resources */ = {isa = PBXBuildFile; fileRef = C24AC43226A0749C009DF01A /* Localizations.strings */; };
 		C2E0275A269436D300743228 /* HTKLoanCaculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */; };
 		C2E0275C269436D300743228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0275B269436D300743228 /* ContentView.swift */; };
 		C2E0275E269436D600743228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E0275D269436D600743228 /* Assets.xcassets */; };
 		C2E02761269436D600743228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E02760269436D600743228 /* Preview Assets.xcassets */; };
 		C2E0276926944A3500743228 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2E0276826944A3500743228 /* README.md */; };
+		C2E0276D2694604200743228 /* InterestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0276C2694604200743228 /* InterestInfoView.swift */; };
+		C2E0276F2694640300743228 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0276E2694640300743228 /* DetailView.swift */; };
+		C2E027712694643E00743228 /* SumaryVisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027702694643E00743228 /* SumaryVisualView.swift */; };
+		C2E027732695AB7000743228 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027722695AB7000743228 /* Extension.swift */; };
+		C2E027752696CD1100743228 /* AmortizationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027742696CD1000743228 /* AmortizationTableView.swift */; };
+		C2E027772696D41100743228 /* CustomCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027762696D41100743228 /* CustomCircle.swift */; };
+		C2E0277A2696D8FF00743228 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2E027792696D8FF00743228 /* IQKeyboardManagerSwift */; };
+		C2E0277C269B341300743228 /* HTKLoanCalulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0277B269B341300743228 /* HTKLoanCalulatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C24AC43226A0749C009DF01A /* Localizations.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizations.strings; sourceTree = "<group>"; };
 		C2E02756269436D300743228 /* HTKLoanCaculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTKLoanCaculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKLoanCaculatorApp.swift; sourceTree = "<group>"; };
 		C2E0275B269436D300743228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +32,13 @@
 		C2E02760269436D600743228 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2E02762269436D600743228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E0276826944A3500743228 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C2E0276C2694604200743228 /* InterestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestInfoView.swift; sourceTree = "<group>"; };
+		C2E0276E2694640300743228 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C2E027702694643E00743228 /* SumaryVisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumaryVisualView.swift; sourceTree = "<group>"; };
+		C2E027722695AB7000743228 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C2E027742696CD1000743228 /* AmortizationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationTableView.swift; sourceTree = "<group>"; };
+		C2E027762696D41100743228 /* CustomCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircle.swift; sourceTree = "<group>"; };
+		C2E0277B269B341300743228 /* HTKLoanCalulatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKLoanCalulatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +46,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E0277A2696D8FF00743228 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2C9181E26B54CB000A16B41 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C2E027722695AB7000743228 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C2E0274D269436D200743228 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +81,14 @@
 		C2E02758269436D300743228 /* HTKLoanCaculator */ = {
 			isa = PBXGroup;
 			children = (
+				C2C9181E26B54CB000A16B41 /* Extension */,
+				C2E0276A26945E5500743228 /* View */,
+				C2E0276B26945E6E00743228 /* ViewModel */,
 				C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */,
-				C2E0275B269436D300743228 /* ContentView.swift */,
 				C2E0275D269436D600743228 /* Assets.xcassets */,
 				C2E02762269436D600743228 /* Info.plist */,
 				C2E0275F269436D600743228 /* Preview Content */,
+				C24AC43226A0749C009DF01A /* Localizations.strings */,
 			);
 			path = HTKLoanCaculator;
 			sourceTree = "<group>";
@@ -70,6 +99,27 @@
 				C2E02760269436D600743228 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2E0276A26945E5500743228 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2E0275B269436D300743228 /* ContentView.swift */,
+				C2E0276C2694604200743228 /* InterestInfoView.swift */,
+				C2E027702694643E00743228 /* SumaryVisualView.swift */,
+				C2E027762696D41100743228 /* CustomCircle.swift */,
+				C2E0276E2694640300743228 /* DetailView.swift */,
+				C2E027742696CD1000743228 /* AmortizationTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2E0276B26945E6E00743228 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2E0277B269B341300743228 /* HTKLoanCalulatorViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +138,9 @@
 			dependencies = (
 			);
 			name = HTKLoanCaculator;
+			packageProductDependencies = (
+				C2E027792696D8FF00743228 /* IQKeyboardManagerSwift */,
+			);
 			productName = HTKLoanCaculator;
 			productReference = C2E02756269436D300743228 /* HTKLoanCaculator.app */;
 			productType = "com.apple.product-type.application";
@@ -113,8 +166,13 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
+				ja,
 			);
 			mainGroup = C2E0274D269436D200743228;
+			packageReferences = (
+				C2E027782696D8FF00743228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = C2E02757269436D300743228 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +190,7 @@
 				C2E0276926944A3500743228 /* README.md in Resources */,
 				C2E02761269436D600743228 /* Preview Assets.xcassets in Resources */,
 				C2E0275E269436D600743228 /* Assets.xcassets in Resources */,
+				C24AC43326A0749C009DF01A /* Localizations.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E0276D2694604200743228 /* InterestInfoView.swift in Sources */,
+				C2E027712694643E00743228 /* SumaryVisualView.swift in Sources */,
+				C2E027772696D41100743228 /* CustomCircle.swift in Sources */,
+				C2E0277C269B341300743228 /* HTKLoanCalulatorViewModel.swift in Sources */,
+				C2E027752696CD1100743228 /* AmortizationTableView.swift in Sources */,
+				C2E0276F2694640300743228 /* DetailView.swift in Sources */,
+				C2E027732695AB7000743228 /* Extension.swift in Sources */,
 				C2E0275C269436D300743228 /* ContentView.swift in Sources */,
 				C2E0275A269436D300743228 /* HTKLoanCaculatorApp.swift in Sources */,
 			);
@@ -332,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2E027782696D8FF00743228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2E027792696D8FF00743228 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2E027782696D8FF00743228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2E0274E269436D200743228 /* Project object */;
 }

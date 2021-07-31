@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import IQKeyboardManagerSwift
 
 @main
 struct HTKLoanCaculatorApp: App {
     var body: some Scene {
         WindowGroup {
+//            IQKeyboardManager.shared.enable = true
             ContentView()
         }
     }
