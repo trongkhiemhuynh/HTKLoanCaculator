@@ -8,10 +8,9 @@
 import SwiftUI
 
 
-struct CustomCircle: View {
-    var body: some View {
-        ArcCircle(startAngle: .degrees(90), endAngle: .degrees(180), clockwise: true).stroke(Color.blue, lineWidth: 20)
-        ArcCircle(startAngle: .degrees(180), endAngle: .degrees(90), clockwise: true).stroke(Color.orange, lineWidth: 20)
-    }
-}
+//struct CustomCircle: View {
+//    var body: some View {
+//        
+//    }
+//}
 

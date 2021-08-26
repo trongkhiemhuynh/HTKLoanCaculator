@@ -6,4 +6,10 @@
   
 */
 
-"txtErrorLoanAmount" = "No correct input!!!";
+"txtErrorLoanAmount" = "Not correct input!!!";
+"txtErrorLoanTerm" = "Not correct loan team!!!";
+"txtErrorInterestRate" = "Not correct interest rate!!!";
+
+"txtFlatRateMethod" = "A Flat rate of interest means the amount of interest paid is fixed. In this method, the amount of interest is calculated on the original loan amount throughout its tenure, thus interest remains constant and does not reduce as the principle amount decreases with your monthly EMI.";
+
+"txtReduceBalanceMethod" = "In reducing balance method, the interest to be paid is revised every month on the outstanding loan amount. In this method, the EMI includes interest payable for the outstanding loan in addition to the principal repayment.";

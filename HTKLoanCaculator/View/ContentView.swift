@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import IQKeyboardManagerSwift
 
 struct ContentView: View {
     
@@ -27,86 +26,90 @@ struct ContentView: View {
                         SumaryVisualView()
                     }
                     
-                    Text("Loan amount").font(.title2).fontWeight(.bold)
-                    
-                    TextField("", text: $viewModel.loanAmount).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 20, height: 30, alignment: .leading).font(.title3)
-                    
-                    Text(viewModel.loanAmountError).foregroundColor(.red).font(.headline)
-                    
-                    HStack(alignment: .bottom, spacing: 10, content: {
-                        Spacer()
+                    Group {
+                        Text("Loan amount").font(.title2).fontWeight(.bold)
                         
-                        Button(".000") {
+                        TextField("Ammount money loan", text: $viewModel.loanAmount).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 20, height: 30, alignment: .leading).font(.title3)
+                        
+                        Text(viewModel.loanAmountError).foregroundColor(.red).font(.headline)
+                        
+                        HStack(alignment: .bottom, spacing: 10, content: {
+                            Spacer()
                             
-                        }.foregroundColor(.black).font(.title3)
-                    
-                        Button(".000.000") {
+                            Button(".000") {
+                                viewModel.loanAmount += "000"
+                            }.foregroundColor(.black).font(.title3)
                             
-                        }.foregroundColor(.black).font(.title3)
-                        
-                        Button("clear") {
-//                            loanAmount = ""
-                        }.foregroundColor(.red).font(.title3)
-                    })
-                    
-                    Text("Loan term").font(.title2).fontWeight(.bold)
-                    
-                    HStack(alignment: .center, spacing: 10, content: {
-                        TextField("", text: $viewModel.term).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .leading).font(.title3)
-                        
-                        Picker(selection: $viewModel.loanTerm, label: Text("Time"), content: {
-                            Text("Month").tag(0)
-                            Text("Year").tag(1)
+                            Button(".000.000") {
+                                viewModel.loanAmount += "000000"
+                            }.foregroundColor(.black).font(.title3)
                             
-                        }).pickerStyle(SegmentedPickerStyle())
-                    })
-                    
-                    Text("Interest rate").font(.title2).fontWeight(.bold)
-                    
-                    HStack(content: {
-                        TextField("", text: $viewModel.rate).textFieldStyle(RoundedBorderTextFieldStyle()).font(.title3).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .center)
+                            Button("clear") {
+                                viewModel.loanAmount = ""
+                            }.foregroundColor(.red).font(.title3)
+                        })
+                    }
+
+                    Group {
+                        Text("Loan term").font(.title2).fontWeight(.bold)
                         
-                        Text("%").font(.title2).fontWeight(.bold)
-                    })
+                        HStack(alignment: .center, spacing: 10, content: {
+                            TextField("How many time?", text: $viewModel.term).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .leading).font(.title3)
+                            
+                            Picker(selection: $viewModel.loanTerm, label: Text("Time"), content: {
+                                Text("Month").tag(0)
+                                Text("Year").tag(1)
+                                
+                            }).pickerStyle(SegmentedPickerStyle())
+                        })
+
+                        Text(viewModel.loanTermError).font(.headline).foregroundColor(.red)
+                    }
                     
-                    HStack(content: {
+                    Group {
+                        Text("Interest rate").font(.title2).fontWeight(.bold)
                         
-                        Text("Interest type").font(.title2).fontWeight(.bold)
-                        
-                        Button {
-                            showDetail = true
-                        } label: {
-                            Image(systemName: "info.circle.fill")
-                        }.sheet(isPresented: $showDetail, content: {
-                            InterestInfoView(isPresent: $showDetail)
+                        HStack(content: {
+                            TextField("", text: $viewModel.rate).textFieldStyle(RoundedBorderTextFieldStyle()).font(.title3).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .center)
+                            
+                            Text("%").font(.title2).fontWeight(.bold)
                         })
                         
-                    })
+                        Text(viewModel.interestRateError).font(.headline).foregroundColor(.red)
+                    }
                     
-//                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/, content: {
-//                        /*@START_MENU_TOKEN@*/Text("1").tag(1)/*@END_MENU_TOKEN@*/
-//                        /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
-//                    })
-                    
-//                    Picker(selection: $viewModel.loanMethod, label: Text("Method"), content: {
-//                        Text("Flat rate method").tag(0)
-//                        Text("Reduce balance method").tag(1)
-//                        
-//                    }).pickerStyle(SegmentedPickerStyle())
-                    
-                    // Detail
-                    
+                    Group {
+                        HStack(content: {
+                            
+                            Text("Interest type").font(.title2).fontWeight(.bold)
+                            
+                            let strInfoLocalize = viewModel.loanMethod == 0 ? "txtFlatRateMethod" : "txtReduceBalanceMethod"
+                            
+                            NavigationLink(destination: InterestInfoView(txtDetailLocalize: strInfoLocalize)) {
+                                
+                                Image(systemName: "info.circle.fill").resizable().frame(width: 16, height: 16, alignment: .leading)
+                                    .padding()
+                            
+                            }
+                            
+                        })
+                        
+                        Picker(selection: $viewModel.loanMethod, label: Text("Picker")) {
+                            Text("Flat rate method").tag(0)
+                            Text("Reduce balance method").tag(1)
+                        }.pickerStyle(SegmentedPickerStyle())
+                    }
                     
                     
                 }).padding().navigationTitle("Loan Calulator").font(.largeTitle).navigationBarTitleDisplayMode(.automatic)
                 
-                NavigationLink("AMORTIZATION TABLE",destination: AmortizationTable()).frame(width: 200, height: 50, alignment: .center).background(Color.red).cornerRadius(10.0).foregroundColor(.black)
-
-//            )
-            
-        }
-            }
+                NavigationLink(destination: AmortizationTable(), isActive: $viewModel.isShowButtonAmortization) {
+                    Text("AMORTIZATION TABLE").padding().font(.bold(.title2)()).foregroundColor(.blue).background(Color(.systemPink))
+                }
                 
+            }
+        }
+        
     }
     
 }

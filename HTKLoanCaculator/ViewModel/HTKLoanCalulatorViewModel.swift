@@ -19,11 +19,15 @@ class HTKLoanCaculatorViewModel: ObservableObject {
     // output
     @Published var totalPaid: String = ""
     @Published var totalInterest: String = ""
-    @Behavvar ject `ject t ing  ""
+    @Published var firstPayment: String =  ""
     
     @Published var loanAmountError: String = ""
+    @Published var loanTermError: String = ""
+    @Published var interestRateError: String = ""
     
+    @Published var isShowButtonAmortization = false
     
+    // free memory management
     private var disposeBag = Set<AnyCancellable>()
     // init
     
@@ -36,9 +40,20 @@ class HTKLoanCaculatorViewModel: ObservableObject {
 //            loanAmountError = ""
 //        }
         
-        $loanAmount.map {
-            $0.isEmpty  ? "not correct value" : ""
-        }.assign(to: \.loanAmountError, on: self).store(in: &disposeBag)
+        let test = $loanAmount.map {
+            ( $0.isEmpty) ? NSLocalizedString("txtErrorLoanAmount", comment: "") : ""
+        }.assign(to: \.loanAmountError, on: self)
+        
+        test.store(in: &disposeBag)
+//        Published.Publisher
+        $term.map { number -> String in
+            if (number.isEmpty) {
+                return NSLocalizedString(NSLocalizedString("txtErrorLoanTerm", comment: ""), comment: "")
+            }
+            
+            return ""
+        }.assign(to: \.loanTermError, on: self).store(in: &disposeBag)
+        
         
         
     }

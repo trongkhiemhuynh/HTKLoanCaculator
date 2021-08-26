@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import IQKeyboardManagerSwift
 
 @main
 struct HTKLoanCaculatorApp: App {

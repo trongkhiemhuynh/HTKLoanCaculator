@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct AmortizationModel {
+    let month: Int
+    let principal: Double
+    let interest: Double
+    let repayment: Double
+}

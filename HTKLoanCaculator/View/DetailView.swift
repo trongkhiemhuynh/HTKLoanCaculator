@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct SumaryTextView: View {
     var body: some View {
 //        Color.red.ignoresSafeArea()
 //        Text("Detail Payment")
@@ -22,14 +22,11 @@ struct DetailView: View {
                 Text("20d")
             }).position(x: 100, y: 180)
         }.frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .leading)
-        
-        
-        
     }
 }
 
-struct Detail_Preview: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+//struct Detail_Preview: PreviewProvider {
+//    static var previews: some View {
+//        DetailView()
+//    }
+//}

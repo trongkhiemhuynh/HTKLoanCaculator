@@ -9,14 +9,17 @@ import SwiftUI
 
 struct InterestInfoView: View {
     
-    @Binding var isPresent: Bool
+//    @Binding var isPresent: Bool
+    let txtDetailLocalize: String
     
     var body: some View {
         
-        Text("Interest Rate Info View")
-        Button("Dismiss") {
-            isPresent = false
-        }.padding()
+        VStack(alignment: .leading, spacing: 0) {
+            Text(NSLocalizedString(txtDetailLocalize, comment: ""))
+            Spacer()
+        }
+        
+        .navigationTitle("Information Interest Rate")
     }
     
     
