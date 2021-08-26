@@ -1,0 +1,9 @@
+/* 
+  Localize.strings
+  HTKLoanCaculator
+
+  Created by khiemht on 26/08/2021.
+  
+*/
+
+"txtErrorLoanAmount" = "No correct input!!!";
