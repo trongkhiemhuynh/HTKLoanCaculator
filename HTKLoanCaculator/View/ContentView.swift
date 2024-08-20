@@ -17,11 +17,9 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20, content: {
-                    
                     if !viewModel.totalPaid.isEmpty {
                         SumaryVisualView()
                     }
@@ -29,7 +27,7 @@ struct ContentView: View {
                     Group {
                         Text("Loan amount").font(.title2).fontWeight(.bold)
                         
-                        TextField("Ammount money loan", text: $viewModel.loanAmount).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 20, height: 30, alignment: .leading).font(.title3)
+                        TextField("Ammount money loan", text: $viewModel.loanAmount).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 10, height: 30, alignment: .leading).font(.title3)
                         
                         Text(viewModel.loanAmountError).foregroundColor(.red).font(.headline)
                         
@@ -54,7 +52,7 @@ struct ContentView: View {
                         Text("Loan term").font(.title2).fontWeight(.bold)
                         
                         HStack(alignment: .center, spacing: 10, content: {
-                            TextField("How many time?", text: $viewModel.term).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .leading).font(.title3)
+                            TextField("loan term", text: $viewModel.term).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .leading).font(.title3)
                             
                             Picker(selection: $viewModel.loanTerm, label: Text("Time"), content: {
                                 Text("Month").tag(0)
@@ -70,7 +68,7 @@ struct ContentView: View {
                         Text("Interest rate").font(.title2).fontWeight(.bold)
                         
                         HStack(content: {
-                            TextField("", text: $viewModel.rate).textFieldStyle(RoundedBorderTextFieldStyle()).font(.title3).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .center)
+                            TextField("interest rate", text: $viewModel.rate).textFieldStyle(RoundedBorderTextFieldStyle()).font(.title3).frame(width: UIScreen.screenWidth - 200, height: 30, alignment: .center)
                             
                             Text("%").font(.title2).fontWeight(.bold)
                         })
@@ -80,18 +78,14 @@ struct ContentView: View {
                     
                     Group {
                         HStack(content: {
-                            
                             Text("Interest type").font(.title2).fontWeight(.bold)
                             
                             let strInfoLocalize = viewModel.loanMethod == 0 ? "txtFlatRateMethod" : "txtReduceBalanceMethod"
                             
                             NavigationLink(destination: InterestInfoView(txtDetailLocalize: strInfoLocalize)) {
-                                
                                 Image(systemName: "info.circle.fill").resizable().frame(width: 16, height: 16, alignment: .leading)
                                     .padding()
-                            
                             }
-                            
                         })
                         
                         Picker(selection: $viewModel.loanMethod, label: Text("Picker")) {
@@ -99,17 +93,13 @@ struct ContentView: View {
                             Text("Reduce balance method").tag(1)
                         }.pickerStyle(SegmentedPickerStyle())
                     }
-                    
-                    
                 }).padding().navigationTitle("Loan Calulator").font(.largeTitle).navigationBarTitleDisplayMode(.automatic)
                 
                 NavigationLink(destination: AmortizationTable(), isActive: $viewModel.isShowButtonAmortization) {
-                    Text("AMORTIZATION TABLE").padding().font(.bold(.title2)()).foregroundColor(.blue).background(Color(.systemPink))
+                    Text("AMORTIZATION TABLE".lowercased()).padding().font(.bold(.title2)()).foregroundColor(.orange).background(Color(.systemBrown))
                 }
-                
             }
         }
-        
     }
     
 }

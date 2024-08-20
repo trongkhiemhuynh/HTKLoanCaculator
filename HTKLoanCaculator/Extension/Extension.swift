@@ -16,6 +16,10 @@ extension UIScreen {
 }
 
 struct ArcCircle: Shape {
+    var startAngle: Angle
+    var endAngle: Angle
+    var clockwise: Bool
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -23,10 +27,4 @@ struct ArcCircle: Shape {
         
         return path
     }
-    
-    var startAngle: Angle
-    var endAngle: Angle
-    var clockwise: Bool
-    
-    
 }
