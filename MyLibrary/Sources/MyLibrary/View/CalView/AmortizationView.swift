@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AmortizationTable: View {
+struct AmortizationView: View {
     
     let arrays: [String] = ["KHIEM", "HUYNH", "TRONG"]
     var body: some View {
@@ -34,10 +34,10 @@ struct AmortizationTable: View {
     }
 }
 
-struct Amortizable_Previews: PreviewProvider {
-//    typealias Previews = <#type#>
-    
-    static var previews: some View {
-        AmortizationTable()
-    }
-}
+//struct Amortizable_Previews: PreviewProvider {
+////    typealias Previews = <#type#>
+//    
+//    static var previews: some View {
+//        AmortizationTable()
+//    }
+//}
