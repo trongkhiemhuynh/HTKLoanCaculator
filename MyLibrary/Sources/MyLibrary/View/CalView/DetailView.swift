@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SumaryTextView: View {
     var body: some View {
@@ -21,7 +22,7 @@ struct SumaryTextView: View {
                 Text("Monthly paid")
                 Text("20d")
             }).position(x: 100, y: 180)
-        }.frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: .leading)
+        }.frame(width: .infinity, height: .infinity, alignment: .leading)
     }
 }
 

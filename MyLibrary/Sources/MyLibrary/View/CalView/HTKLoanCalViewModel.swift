@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class HTKLoanCaculatorViewModel: ObservableObject {
+class HTKLoanCalViewModel: ObservableObject {
     // input
     @Published var loanAmount: String = ""
     @Published var term: String = ""
@@ -27,39 +27,26 @@ class HTKLoanCaculatorViewModel: ObservableObject {
     
     @Published var isShowButtonAmortization = false
     
-    // free memory management
     private var disposeBag = Set<AnyCancellable>()
-    // init
-    
-    
+
     init() {
-        // check loan amount
-//        if (self.loanAmount.isEmpty) {
-//            loanAmountError = "loan amount not correct"
-//        } else {
-//            loanAmountError = ""
-//        }
-        
-        let test = $loanAmount.map {
-            ( $0.isEmpty) ? NSLocalizedString("txtErrorLoanAmount", comment: "") : ""
-        }.assign(to: \.loanAmountError, on: self)
-        
-        test.store(in: &disposeBag)
-//        Published.Publisher
-        $term.map { number -> String in
-            if (number.isEmpty) {
-                return NSLocalizedString(NSLocalizedString("txtErrorLoanTerm", comment: ""), comment: "")
+        $loanAmount.map { item in
+            if item.count == 0 {return ""}
+            if let int = Int(item), int > 0 {
+                return ""
             }
-            
-            return ""
+            return NSLocalizedString("txtErrorLoanAmount", comment: "")
+        }.assign(to: \.loanAmountError, on: self).store(in: &disposeBag)
+
+        $term.map { item in
+            if item.count == 0 {return ""}
+            if let int = Int(item), int > 0 {
+                return ""
+            }
+            return NSLocalizedString(NSLocalizedString("txtErrorLoanTerm", comment: ""), comment: "")
         }.assign(to: \.loanTermError, on: self).store(in: &disposeBag)
-        
-        
-        
     }
-    
-    //tranform
-    
+
     func transform() {
         
     }

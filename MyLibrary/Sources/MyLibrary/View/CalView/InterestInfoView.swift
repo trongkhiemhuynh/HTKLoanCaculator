@@ -13,13 +13,7 @@ struct InterestInfoView: View {
     let txtDetailLocalize: String
     
     var body: some View {
-        
-        VStack(alignment: .leading, spacing: 0) {
-            Text(NSLocalizedString(txtDetailLocalize, comment: ""))
-            Spacer()
-        }
-        
-        .navigationTitle("Information Interest Rate")
+        Text(NSLocalizedString(txtDetailLocalize, comment: "")).padding(10)
     }
     
     

@@ -3,56 +3,116 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C24AC43326A0749C009DF01A /* Localizations.strings in Resources */ = {isa = PBXBuildFile; fileRef = C24AC43226A0749C009DF01A /* Localizations.strings */; };
 		C266FAB626D7FC7B00DC990F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C266FAB526D7FC7B00DC990F /* Localizable.strings */; };
-		C266FAB826D80EB000DC990F /* AmortizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C266FAB726D80EB000DC990F /* AmortizationModel.swift */; };
+		C2B255122C7A18360047AAB4 /* MyLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C2B255112C7A18360047AAB4 /* MyLibrary */; };
+		C2B2551A2C7A189B0047AAB4 /* HTKAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B255192C7A189B0047AAB4 /* HTKAppApp.swift */; };
+		C2B2551C2C7A189B0047AAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2551B2C7A189B0047AAB4 /* ContentView.swift */; };
+		C2B2551E2C7A189C0047AAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B2551D2C7A189C0047AAB4 /* Assets.xcassets */; };
+		C2B255212C7A189C0047AAB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B255202C7A189C0047AAB4 /* Preview Assets.xcassets */; };
+		C2B2552B2C7A189C0047AAB4 /* HTKApp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2552A2C7A189C0047AAB4 /* HTKApp_Watch_AppTests.swift */; };
+		C2B255352C7A189C0047AAB4 /* HTKApp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B255342C7A189C0047AAB4 /* HTKApp_Watch_AppUITests.swift */; };
+		C2B255372C7A189C0047AAB4 /* HTKApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B255362C7A189C0047AAB4 /* HTKApp_Watch_AppUITestsLaunchTests.swift */; };
+		C2B2553A2C7A189C0047AAB4 /* HTKApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C2B255172C7A189B0047AAB4 /* HTKApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C2C9182026B54F4300A16B41 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C9181F26B54F4300A16B41 /* Launch Screen.storyboard */; };
 		C2E0275A269436D300743228 /* HTKLoanCaculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */; };
-		C2E0275C269436D300743228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0275B269436D300743228 /* ContentView.swift */; };
 		C2E0275E269436D600743228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E0275D269436D600743228 /* Assets.xcassets */; };
 		C2E02761269436D600743228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E02760269436D600743228 /* Preview Assets.xcassets */; };
 		C2E0276926944A3500743228 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2E0276826944A3500743228 /* README.md */; };
-		C2E0276D2694604200743228 /* InterestInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0276C2694604200743228 /* InterestInfoView.swift */; };
-		C2E0276F2694640300743228 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0276E2694640300743228 /* DetailView.swift */; };
-		C2E027712694643E00743228 /* SumaryVisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027702694643E00743228 /* SumaryVisualView.swift */; };
-		C2E027732695AB7000743228 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027722695AB7000743228 /* Extension.swift */; };
-		C2E027752696CD1100743228 /* AmortizationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027742696CD1000743228 /* AmortizationTableView.swift */; };
-		C2E027772696D41100743228 /* CustomCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E027762696D41100743228 /* CustomCircle.swift */; };
-		C2E0277A2696D8FF00743228 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2E027792696D8FF00743228 /* IQKeyboardManagerSwift */; };
-		C2E0277C269B341300743228 /* HTKLoanCalulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E0277B269B341300743228 /* HTKLoanCalulatorViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2B255272C7A189C0047AAB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2E0274E269436D200743228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2B255162C7A189B0047AAB4;
+			remoteInfo = "HTKApp Watch App";
+		};
+		C2B255312C7A189C0047AAB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2E0274E269436D200743228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2B255162C7A189B0047AAB4;
+			remoteInfo = "HTKApp Watch App";
+		};
+		C2B255382C7A189C0047AAB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2E0274E269436D200743228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2B255162C7A189B0047AAB4;
+			remoteInfo = "HTKApp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2B2553E2C7A189C0047AAB4 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C2B2553A2C7A189C0047AAB4 /* HTKApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C24AC43226A0749C009DF01A /* Localizations.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizations.strings; sourceTree = "<group>"; };
 		C266FAB526D7FC7B00DC990F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		C266FAB726D80EB000DC990F /* AmortizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationModel.swift; sourceTree = "<group>"; };
+		C2B2550F2C7A180C0047AAB4 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyLibrary; sourceTree = "<group>"; };
+		C2B255172C7A189B0047AAB4 /* HTKApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HTKApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B255192C7A189B0047AAB4 /* HTKAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKAppApp.swift; sourceTree = "<group>"; };
+		C2B2551B2C7A189B0047AAB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2B2551D2C7A189C0047AAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2B255202C7A189C0047AAB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2B255262C7A189C0047AAB4 /* HTKApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTKApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B2552A2C7A189C0047AAB4 /* HTKApp_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKApp_Watch_AppTests.swift; sourceTree = "<group>"; };
+		C2B255302C7A189C0047AAB4 /* HTKApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTKApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B255342C7A189C0047AAB4 /* HTKApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		C2B255362C7A189C0047AAB4 /* HTKApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C2C9181F26B54F4300A16B41 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C2E02756269436D300743228 /* HTKLoanCaculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTKLoanCaculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKLoanCaculatorApp.swift; sourceTree = "<group>"; };
-		C2E0275B269436D300743228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2E0275D269436D600743228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E02760269436D600743228 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2E02762269436D600743228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E0276826944A3500743228 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C2E0276C2694604200743228 /* InterestInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestInfoView.swift; sourceTree = "<group>"; };
-		C2E0276E2694640300743228 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		C2E027702694643E00743228 /* SumaryVisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumaryVisualView.swift; sourceTree = "<group>"; };
-		C2E027722695AB7000743228 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		C2E027742696CD1000743228 /* AmortizationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmortizationTableView.swift; sourceTree = "<group>"; };
-		C2E027762696D41100743228 /* CustomCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircle.swift; sourceTree = "<group>"; };
-		C2E0277B269B341300743228 /* HTKLoanCalulatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTKLoanCalulatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C2B255142C7A189B0047AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B255232C7A189C0047AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B2552D2C7A189C0047AAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2E02753269436D300743228 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E0277A2696D8FF00743228 /* IQKeyboardManagerSwift in Frameworks */,
+				C2B255122C7A18360047AAB4 /* MyLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,28 +127,60 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		C2C9181E26B54CB000A16B41 /* Extension */ = {
+		C2B255102C7A18360047AAB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C2E027722695AB7000743228 /* Extension.swift */,
 			);
-			path = Extension;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C2C9182126B69C7200A16B41 /* Model */ = {
+		C2B255182C7A189B0047AAB4 /* HTKApp Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				C266FAB726D80EB000DC990F /* AmortizationModel.swift */,
+				C2B255192C7A189B0047AAB4 /* HTKAppApp.swift */,
+				C2B2551B2C7A189B0047AAB4 /* ContentView.swift */,
+				C2B2551D2C7A189C0047AAB4 /* Assets.xcassets */,
+				C2B2551F2C7A189C0047AAB4 /* Preview Content */,
 			);
-			path = Model;
+			path = "HTKApp Watch App";
+			sourceTree = "<group>";
+		};
+		C2B2551F2C7A189C0047AAB4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C2B255202C7A189C0047AAB4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2B255292C7A189C0047AAB4 /* HTKApp Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2B2552A2C7A189C0047AAB4 /* HTKApp_Watch_AppTests.swift */,
+			);
+			path = "HTKApp Watch AppTests";
+			sourceTree = "<group>";
+		};
+		C2B255332C7A189C0047AAB4 /* HTKApp Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2B255342C7A189C0047AAB4 /* HTKApp_Watch_AppUITests.swift */,
+				C2B255362C7A189C0047AAB4 /* HTKApp_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "HTKApp Watch AppUITests";
 			sourceTree = "<group>";
 		};
 		C2E0274D269436D200743228 = {
 			isa = PBXGroup;
 			children = (
+				C2B2550F2C7A180C0047AAB4 /* MyLibrary */,
 				C2E0276826944A3500743228 /* README.md */,
 				C2E02758269436D300743228 /* HTKLoanCaculator */,
+				C2B255182C7A189B0047AAB4 /* HTKApp Watch App */,
+				C2B255292C7A189C0047AAB4 /* HTKApp Watch AppTests */,
+				C2B255332C7A189C0047AAB4 /* HTKApp Watch AppUITests */,
 				C2E02757269436D300743228 /* Products */,
+				C2B255102C7A18360047AAB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				C2E02756269436D300743228 /* HTKLoanCaculator.app */,
+				C2B255172C7A189B0047AAB4 /* HTKApp Watch App.app */,
+				C2B255262C7A189C0047AAB4 /* HTKApp Watch AppTests.xctest */,
+				C2B255302C7A189C0047AAB4 /* HTKApp Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,11 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C266FAB426D7FC4F00DC990F /* Resource */,
-				C2C9182126B69C7200A16B41 /* Model */,
-				C2C9181E26B54CB000A16B41 /* Extension */,
 				C2E0276A26945E5500743228 /* View */,
-				C2E0276B26945E6E00743228 /* ViewModel */,
-				C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */,
 				C2E0275D269436D600743228 /* Assets.xcassets */,
 				C2E02762269436D600743228 /* Info.plist */,
 				C2E0275F269436D600743228 /* Preview Content */,
@@ -129,27 +220,69 @@
 		C2E0276A26945E5500743228 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C2E0275B269436D300743228 /* ContentView.swift */,
-				C2E0276C2694604200743228 /* InterestInfoView.swift */,
-				C2E027702694643E00743228 /* SumaryVisualView.swift */,
-				C2E027762696D41100743228 /* CustomCircle.swift */,
-				C2E0276E2694640300743228 /* DetailView.swift */,
-				C2E027742696CD1000743228 /* AmortizationTableView.swift */,
+				C2E02759269436D300743228 /* HTKLoanCaculatorApp.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C2E0276B26945E6E00743228 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				C2E0277B269B341300743228 /* HTKLoanCalulatorViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C2B255162C7A189B0047AAB4 /* HTKApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B2553B2C7A189C0047AAB4 /* Build configuration list for PBXNativeTarget "HTKApp Watch App" */;
+			buildPhases = (
+				C2B255132C7A189B0047AAB4 /* Sources */,
+				C2B255142C7A189B0047AAB4 /* Frameworks */,
+				C2B255152C7A189B0047AAB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HTKApp Watch App";
+			packageProductDependencies = (
+			);
+			productName = "HTKApp Watch App";
+			productReference = C2B255172C7A189B0047AAB4 /* HTKApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2B255252C7A189C0047AAB4 /* HTKApp Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B2553F2C7A189C0047AAB4 /* Build configuration list for PBXNativeTarget "HTKApp Watch AppTests" */;
+			buildPhases = (
+				C2B255222C7A189C0047AAB4 /* Sources */,
+				C2B255232C7A189C0047AAB4 /* Frameworks */,
+				C2B255242C7A189C0047AAB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2B255282C7A189C0047AAB4 /* PBXTargetDependency */,
+			);
+			name = "HTKApp Watch AppTests";
+			productName = "HTKApp Watch AppTests";
+			productReference = C2B255262C7A189C0047AAB4 /* HTKApp Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2B2552F2C7A189C0047AAB4 /* HTKApp Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2B255422C7A189C0047AAB4 /* Build configuration list for PBXNativeTarget "HTKApp Watch AppUITests" */;
+			buildPhases = (
+				C2B2552C2C7A189C0047AAB4 /* Sources */,
+				C2B2552D2C7A189C0047AAB4 /* Frameworks */,
+				C2B2552E2C7A189C0047AAB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2B255322C7A189C0047AAB4 /* PBXTargetDependency */,
+			);
+			name = "HTKApp Watch AppUITests";
+			productName = "HTKApp Watch AppUITests";
+			productReference = C2B255302C7A189C0047AAB4 /* HTKApp Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C2E02755269436D300743228 /* HTKLoanCaculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2E02765269436D600743228 /* Build configuration list for PBXNativeTarget "HTKLoanCaculator" */;
@@ -157,14 +290,16 @@
 				C2E02752269436D300743228 /* Sources */,
 				C2E02753269436D300743228 /* Frameworks */,
 				C2E02754269436D300743228 /* Resources */,
+				C2B2553E2C7A189C0047AAB4 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C2B255392C7A189C0047AAB4 /* PBXTargetDependency */,
 			);
 			name = HTKLoanCaculator;
 			packageProductDependencies = (
-				C2E027792696D8FF00743228 /* IQKeyboardManagerSwift */,
+				C2B255112C7A18360047AAB4 /* MyLibrary */,
 			);
 			productName = HTKLoanCaculator;
 			productReference = C2E02756269436D300743228 /* HTKLoanCaculator.app */;
@@ -176,9 +311,20 @@
 		C2E0274E269436D200743228 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					C2B255162C7A189B0047AAB4 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					C2B255252C7A189C0047AAB4 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = C2B255162C7A189B0047AAB4;
+					};
+					C2B2552F2C7A189C0047AAB4 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = C2B255162C7A189B0047AAB4;
+					};
 					C2E02755269436D300743228 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -196,18 +342,43 @@
 			);
 			mainGroup = C2E0274D269436D200743228;
 			packageReferences = (
-				C2E027782696D8FF00743228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = C2E02757269436D300743228 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C2E02755269436D300743228 /* HTKLoanCaculator */,
+				C2B255162C7A189B0047AAB4 /* HTKApp Watch App */,
+				C2B255252C7A189C0047AAB4 /* HTKApp Watch AppTests */,
+				C2B2552F2C7A189C0047AAB4 /* HTKApp Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C2B255152C7A189B0047AAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B255212C7A189C0047AAB4 /* Preview Assets.xcassets in Resources */,
+				C2B2551E2C7A189C0047AAB4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B255242C7A189C0047AAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B2552E2C7A189C0047AAB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2E02754269436D300743228 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,26 +395,232 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C2B255132C7A189B0047AAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B2551C2C7A189B0047AAB4 /* ContentView.swift in Sources */,
+				C2B2551A2C7A189B0047AAB4 /* HTKAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B255222C7A189C0047AAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B2552B2C7A189C0047AAB4 /* HTKApp_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2B2552C2C7A189C0047AAB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2B255372C7A189C0047AAB4 /* HTKApp_Watch_AppUITestsLaunchTests.swift in Sources */,
+				C2B255352C7A189C0047AAB4 /* HTKApp_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2E02752269436D300743228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C266FAB826D80EB000DC990F /* AmortizationModel.swift in Sources */,
-				C2E0276D2694604200743228 /* InterestInfoView.swift in Sources */,
-				C2E027712694643E00743228 /* SumaryVisualView.swift in Sources */,
-				C2E027772696D41100743228 /* CustomCircle.swift in Sources */,
-				C2E0277C269B341300743228 /* HTKLoanCalulatorViewModel.swift in Sources */,
-				C2E027752696CD1100743228 /* AmortizationTableView.swift in Sources */,
-				C2E0276F2694640300743228 /* DetailView.swift in Sources */,
-				C2E027732695AB7000743228 /* Extension.swift in Sources */,
-				C2E0275C269436D300743228 /* ContentView.swift in Sources */,
 				C2E0275A269436D300743228 /* HTKLoanCaculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C2B255282C7A189C0047AAB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2B255162C7A189B0047AAB4 /* HTKApp Watch App */;
+			targetProxy = C2B255272C7A189C0047AAB4 /* PBXContainerItemProxy */;
+		};
+		C2B255322C7A189C0047AAB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2B255162C7A189B0047AAB4 /* HTKApp Watch App */;
+			targetProxy = C2B255312C7A189C0047AAB4 /* PBXContainerItemProxy */;
+		};
+		C2B255392C7A189C0047AAB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2B255162C7A189B0047AAB4 /* HTKApp Watch App */;
+			targetProxy = C2B255382C7A189C0047AAB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C2B2553C2C7A189C0047AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HTKApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = ULAYXARLG5;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HTKApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.htk2021.ios.HTKLoanCaculator;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.htk2021.ios.HTKLoanCaculator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		C2B2553D2C7A189C0047AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HTKApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = ULAYXARLG5;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HTKApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.htk2021.ios.HTKLoanCaculator;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.htk2021.ios.HTKLoanCaculator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		C2B255402C7A189C0047AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khiemht.htkapp-watch.HTKApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTKApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HTKApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		C2B255412C7A189C0047AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khiemht.htkapp-watch.HTKApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HTKApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HTKApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		C2B255432C7A189C0047AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khiemht.htkapp-watch.HTKApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HTKApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		C2B255442C7A189C0047AAB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khiemht.htkapp-watch.HTKApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HTKApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 		C2E02763269436D600743228 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,6 +740,7 @@
 		C2E02766269436D600743228 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +763,7 @@
 		C2E02767269436D600743228 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +786,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C2B2553B2C7A189C0047AAB4 /* Build configuration list for PBXNativeTarget "HTKApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B2553C2C7A189C0047AAB4 /* Debug */,
+				C2B2553D2C7A189C0047AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2B2553F2C7A189C0047AAB4 /* Build configuration list for PBXNativeTarget "HTKApp Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B255402C7A189C0047AAB4 /* Debug */,
+				C2B255412C7A189C0047AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2B255422C7A189C0047AAB4 /* Build configuration list for PBXNativeTarget "HTKApp Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B255432C7A189C0047AAB4 /* Debug */,
+				C2B255442C7A189C0047AAB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C2E02751269436D200743228 /* Build configuration list for PBXProject "HTKLoanCaculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -427,22 +833,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C2E027782696D8FF00743228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.6;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		C2E027792696D8FF00743228 /* IQKeyboardManagerSwift */ = {
+		C2B255112C7A18360047AAB4 /* MyLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C2E027782696D8FF00743228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
+			productName = MyLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
