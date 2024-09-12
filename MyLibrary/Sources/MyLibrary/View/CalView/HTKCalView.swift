@@ -10,6 +10,10 @@ public struct HTKCalView: View {
     @ObservedObject var viewModel: HTKLoanCalViewModel
     @State private var showingPopover = false
     
+//    @State private var totalPaid: Double = 100
+//    @State private var totalInterest: Double = 30
+//    @State private var monthlyPaid: Double = 10
+    
     public init() {
         viewModel = HTKLoanCalViewModel()
     }
@@ -18,12 +22,14 @@ public struct HTKCalView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 4, content: {
-                    if !viewModel.totalPaid.isEmpty {
-                        SumaryVisualView()
+                    if viewModel.loanAmountError.isEmpty && viewModel.loanTermError.isEmpty && viewModel.interestRateError.isEmpty && !viewModel.isFirstLaunch {
+                        SumaryVisualView(paidOffValue: self.viewModel.totalPaid, totalInterestValue: self.viewModel.totalInterest, monthlyPaidValue: self.viewModel.firstPayment)
+                    } else {
+//                        SumaryVisualView(paidOffValue: $totalPaid, totalInterestValue: $totalInterest, monthlyPaidValue: $monthlyPaid).opacity(1)
                     }
                     
                     Group {
-                        Text("Loan amount").font(.title3).fontWeight(.regular)
+                        Text("Loan amount").font(.title3).fontWeight(.medium)
                         
                         TextField("", text: $viewModel.loanAmount).textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -37,27 +43,27 @@ public struct HTKCalView: View {
                             
                             Button(".000") {
                                 viewModel.loanAmount += "000"
-                            }.foregroundColor(.gray).font(.callout)
+                            }.foregroundColor(.black).font(.callout)
                             
                             Button(".000.000") {
                                 viewModel.loanAmount += "000000"
-                            }.foregroundColor(.gray).font(.callout)
+                            }.foregroundColor(.black).font(.callout)
                             
                             Button("clear") {
                                 viewModel.loanAmount = ""
-                            }.foregroundColor(.gray).font(.callout)
+                            }.foregroundColor(.red).font(.callout)
                         })
                     }
 
                     Group {
-                        Text("Loan term").font(.title3).fontWeight(.regular)
+                        Text("Loan term").font(.title3).fontWeight(.medium)
                         
                         HStack(alignment: .center, spacing: 10, content: {
                             TextField("", text: $viewModel.term).textFieldStyle(RoundedBorderTextFieldStyle())/*.frame(width: .infinity - 200, height: 30, alignment: .leading)*/
                                 .font(.title3)
                                 .frame(minWidth: 10, maxWidth: .infinity - 200, minHeight: 10, maxHeight: 30)
                             
-                            Picker(selection: $viewModel.loanTerm, 
+                            Picker(selection: $viewModel.loanTermMethod, 
                                    label: Text("Time"), content: {
                                 Text("Month").tag(0)
                                 Text("Year").tag(1)
@@ -69,7 +75,7 @@ public struct HTKCalView: View {
                     }
                     
                     Group {
-                        Text("Interest rate").font(.title3).fontWeight(.regular)
+                        Text("Interest rate").font(.title3).fontWeight(.medium)
                         
                         HStack(content: {
                             TextField("", text: $viewModel.rate).textFieldStyle(RoundedBorderTextFieldStyle()).font(.title3)
@@ -86,7 +92,7 @@ public struct HTKCalView: View {
                     
                     Group {
                         HStack(content: {
-                            Text("Interest type").font(.title3).fontWeight(.regular)
+                            Text("Interest type").font(.title3).fontWeight(.medium)
                             
                             let strInfoLocalize = viewModel.loanMethod == 0 ? NSLocalizedString("txtFlatRateMethod", comment: "flat_rate") :
                             NSLocalizedString("txtReduceBalanceMethod", comment: "reduce_rate")
@@ -110,14 +116,14 @@ public struct HTKCalView: View {
                 .font(.largeTitle)
                 .navigationBarTitleDisplayMode(.automatic)
                 
-                Spacer().frame(height: 100)
+                Spacer().frame(height: 54)
                 
                 NavigationLink(destination: AmortizationView(),
                                isActive: $viewModel.isShowButtonAmortization) {
                     
                     Text("AMORTIZATION TABLE")
-
-                        .font(.title2)
+                        .padding()
+                        .font(.headline)
                         .foregroundColor(.white)
                         .background(Color.blue)
 

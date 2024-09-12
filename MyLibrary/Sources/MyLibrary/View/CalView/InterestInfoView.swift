@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct InterestInfoView: View {
-    
-//    @Binding var isPresent: Bool
+
     let txtDetailLocalize: String
     
     var body: some View {
