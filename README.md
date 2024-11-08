@@ -14,5 +14,5 @@
 <!--# Sep6,24 Property auto obsever change to redraw UI -->
 <!--# Add money lover track log-->
 
-Sep11, 24 - Completely code to LikeLion review - Add more repository prj for Yahoo mail requires
+<!--Sep11, 24 - Completely code to LikeLion review - Add more repository prj for Yahoo mail requires-->
 
