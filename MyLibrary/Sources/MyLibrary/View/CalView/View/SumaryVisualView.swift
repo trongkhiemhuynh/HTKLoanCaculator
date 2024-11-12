@@ -10,7 +10,7 @@ import SwiftUI
 let heightTextView: CGFloat = 31
 
 struct SumaryVisualView: View {
-    // MARK: properties biding
+    // MARK: - properties binding
     var paidOffValue: String
     var totalInterestValue: String
     var monthlyPaidValue: String

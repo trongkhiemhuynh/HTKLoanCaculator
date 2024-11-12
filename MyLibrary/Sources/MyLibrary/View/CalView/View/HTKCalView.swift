@@ -7,12 +7,8 @@ import UIKit
 public struct HTKCalView: View {
     
     @State private var showDetail = false
-    @ObservedObject var viewModel: HTKLoanCalViewModel
     @State private var showingPopover = false
-    
-//    @State private var totalPaid: Double = 100
-//    @State private var totalInterest: Double = 30
-//    @State private var monthlyPaid: Double = 10
+    @ObservedObject var viewModel: HTKLoanCalViewModel
     
     public init() {
         viewModel = HTKLoanCalViewModel()
@@ -25,7 +21,7 @@ public struct HTKCalView: View {
                     if viewModel.loanAmountError.isEmpty && viewModel.loanTermError.isEmpty && viewModel.interestRateError.isEmpty && !viewModel.isFirstLaunch {
                         SumaryVisualView(paidOffValue: self.viewModel.totalPaid, totalInterestValue: self.viewModel.totalInterest, monthlyPaidValue: self.viewModel.firstPayment)
                     } else {
-//                        SumaryVisualView(paidOffValue: $totalPaid, totalInterestValue: $totalInterest, monthlyPaidValue: $monthlyPaid).opacity(1)
+
                     }
                     
                     Group {
@@ -121,12 +117,12 @@ public struct HTKCalView: View {
                 NavigationLink(destination: AmortizationView(),
                                isActive: $viewModel.isShowButtonAmortization) {
                     
-                    Text("AMORTIZATION TABLE")
+                    Text("Amortization table")
                         .padding()
+                        .background(Color(.blue))
                         .font(.headline)
                         .foregroundColor(.white)
-                        .background(Color.blue)
-
+                    
                 }
             }
         }
@@ -134,10 +130,10 @@ public struct HTKCalView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            HTKCalView()
-        }
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            HTKCalView()
+//        }
+//    }
+//}
