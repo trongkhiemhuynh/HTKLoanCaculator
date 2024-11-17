@@ -10,6 +10,8 @@ import MyLibrary
 
 @main
 struct HTKAppView: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         return WindowGroup {
             TabView {
@@ -46,15 +48,14 @@ struct HTKAppView: App {
                     }
                 }
                 
-                SettingView().tabItem {
+                SettingsView().tabItem {
                     Label {
                         Text("Setting")
                     } icon: {
                         Image(systemName: "cube.fill")
                     }
                 }
-            }
-            
+            }.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
