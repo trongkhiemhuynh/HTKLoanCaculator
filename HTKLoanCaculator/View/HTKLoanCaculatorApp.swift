@@ -55,7 +55,8 @@ struct HTKAppView: App {
                         Image(systemName: "cube.fill")
                     }
                 }
-            }.environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
+//            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

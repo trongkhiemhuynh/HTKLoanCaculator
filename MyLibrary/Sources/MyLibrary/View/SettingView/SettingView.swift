@@ -7,11 +7,13 @@
 
 import SwiftUI
 import SnapKit
+import UIKit
 
 public struct SettingView: View {
     public init() {}
     public var body: some View {
-        Text("setting view loading ...")
+//        Text("setting view loading ...")
+        SettingsView()
     }
 }
 
@@ -24,32 +26,34 @@ public struct SettingView: View {
  - returns: collection view UI - header - avatar -
  */
 public class SettingViewController: UIViewController {
-//    public init() {
-//        super.init(nibName: nil, bundle: nil)
-//    }
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     lazy var collectionView: UICollectionView = {
-        let view = UICollectionView(frame: .zero)
-//        view.delegate = self
-//        view.dataSource = self
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 8, right: 0)
         layout.itemSize = CGSize(width: self.view.frame.width/2 - 20, height: self.view.frame.width/2 - 20)
-        layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = 5
+        layout.minimumInteritemSpacing = 8
+        layout.minimumLineSpacing = 8
         layout.scrollDirection = .vertical
         
-        view.collectionViewLayout = layout
+//        v.collectionViewLayout = layout
+        let v = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        v.translatesAutoresizingMaskIntoConstraints = false
+        v.delegate = self
+//        v.dataSource = self
+        v.register(SettingCell.self, forCellWithReuseIdentifier: "cell")
         
-        return view
+        return v
     }()
     
     var cellView: SettingCell {
-        let cell = SettingCell()
+        let cell = SettingCell(frame: .zero)
         
         return cell
     }
@@ -65,63 +69,35 @@ public class SettingViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .red
         
-        // FIXME: crash collectionview which init
-//        self.addViews()
-//        self.configureLayout()
-//        self.applySnapshot()
+        self.addSubViews()
+        self.onSnapshot()
     }
     
-    private func configureLayout() {
-        self.collectionView.register(SettingCell.self, forCellWithReuseIdentifier: "cell")
-        
-        
-    }
     
-    private func addViews() {
+    private func addSubViews() {
         self.view.addSubview(self.collectionView)
         self.collectionView.snp.makeConstraints { make in
-            make.leadingMargin.trailingMargin.topMargin.bottomMargin.equalToSuperview()
+            make.edges.equalTo(self.view.safeAreaLayoutGuide)
         }
     }
     
-    private func applySnapshot(animatingDifferences: Bool = true) {
+    private func onSnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
-        
-        snapshot.appendItems(flowers, toSection: nil)
+        snapshot.appendSections([.main])
+        snapshot.appendItems(flowers, toSection: .main)
         
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 }
 
-//extension SettingViewController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return self.flowers.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = UICollectionViewCell()
-//        
-//        return cell
-//    }
-//}
-
 extension SettingViewController {
     func makeDataSource() -> DataSource {
         let dataSource = DataSource(collectionView: self.collectionView) { collectionView, indexPath, flower in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SettingCell
-            cell?.lblName.text = flower.name
-            cell?.lblDescription.text = flower.description
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SettingCell
+            cell.lblName.text = flower.name
+            cell.lblDescription.text = flower.description
 
-            if let url = URL(string: flower.imageName) {
-                do {
-                    let data = try Data(contentsOf: url)
-                    let image = UIImage(data: data)
-                    cell?.imgBackground.image = image
-                } catch {
-                    cell?.imgBackground.backgroundColor = .gray
-                }
-                    
-            }
+            self.loadImage(indexPath, cell)
             
             return cell
         }
@@ -130,6 +106,46 @@ extension SettingViewController {
     }
 }
 
+extension SettingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = dataSource.itemIdentifier(for: indexPath)
+        print(item?.name)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Flower.allFlowers().count
+    }
+    
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SettingCell
+        cell.lblName.text = flowers[indexPath.row].name
+        cell.lblDescription.text = flowers[indexPath.row].description
+        
+        loadImage(indexPath, cell)
+        
+        return cell
+    }
+    
+    fileprivate func loadImage(_ indexPath: IndexPath, _ cell: SettingCell) {
+        if let url = URL(string: flowers[indexPath.item].imageName) {
+            DispatchQueue.global(qos: .userInitiated).async {
+                do {
+                    let data = try Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        cell.imgBackground.image = UIImage(data: data)
+                    }
+                } catch {
+                    cell.imgBackground.backgroundColor = .lightGray
+                }
+            }
+            cell.imgBackground.backgroundColor = .lightGray
+        } else {
+            cell.imgBackground.backgroundColor = .lightGray
+        }
+    }
+}
 
 class Flower: Hashable {
     var id = UUID()
@@ -197,8 +213,8 @@ extension Flower {
     }
 }
 
-enum Section {
-    case main
+enum Section: String {
+    case main = "Hello World!!!"
 }
 
 class SettingCell: UICollectionViewCell {
@@ -234,13 +250,15 @@ class SettingCell: UICollectionViewCell {
         addSubview(self.lblName)
         addSubview(self.lblDescription)
         addSubview(self.imgBackground)
+        sendSubviewToBack(self.imgBackground)
         
         self.lblName.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalTo(self)
+            make.bottom.equalTo(lblDescription.snp.top).inset(-8)
         }
         
         self.lblDescription.snp.makeConstraints { make in
-            make.top.equalTo(self.lblName).offset(10)
+            make.bottom.equalTo(self.snp.bottom).inset(24)
             make.centerX.equalTo(self)
         }
         
@@ -251,14 +269,14 @@ class SettingCell: UICollectionViewCell {
 }
 
 public struct SettingsView: UIViewControllerRepresentable {
-    public init() {
-        
-    }
-    public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
     
-    public func makeUIViewController(context: Context) -> some UIViewController {
+    public typealias UIViewControllerType = SettingViewController
+    
+    public init() {}
+    
+    public func updateUIViewController(_ uiViewController: SettingViewController, context: Context) {}
+    
+    public func makeUIViewController(context: Context) -> SettingViewController {
         SettingViewController()
     }
 }
